@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Green Energy Tokens - Demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js">
+  </script>
+</head>
+<body>
+<div class="container">
+  <h4> Code Green EDF Hackathon </h4>
+  <hr>
+  <header>
+    <div class="flex">
+     <h1>Green Energy Token</h1>
+     <h2>Save the world with GET - REC on the Blockchain</h2>
+    </div>
+    <div class="flex">
+      <img class="headerimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Wind_Turbine.svg/2000px-Wind_Turbine.svg.png" alt="windturbine">
+    </div>
+  </header>
+  <div class="app">
+    <h3>You have <span class="black"><span id="balance"> </span> REC / GET</span>
+    <br><br>
+      <button onclick="App.refreshBalance()">refresh</button> </h3>
+    <hr>
+  <div class="tab">
+    <button class="tablinks" onclick="openAction(event, 'Mint')">Mint</button>
+    <button class="tablinks" onclick="openAction(event, 'Send')">Send</button>
+    <button class="tablinks" onclick="openAction(event, 'list')">My GET</button>
+    <button class="tablinks" onclick="openAction(event, 'retire')">Retire REC</button>
+  </div>
+
+  <div id="Mint" class="tabcontent">
+    <h5>Mint a New Green Energy Token</h5>
+    <br><label for="Company">Company Name:</label><input type="text" id="Company" placeholder="e.g., EDF"></input>
+    <br><label for="Energy">Energy:</label><input type="text" id="Energy" placeholder="e.g., Solar"></input>
+    <br><br><button id="send" onclick="App.mintCoin()">Mint REC </button>
+  </div>
+  <div id="Send" class="tabcontent">
+    <h5>Transfer a REC</h5>
+    <br><label for="amount">Amount:</label><input type="text" id="amount" placeholder="e.g., 95"></input>
+    <br><label for="receiver">To Address:</label><input type="text" id="receiver" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><br><button id="send" onclick="App.sendCoin()">Send REC</button>
+  </div>
+  <div id="list" class="tabcontent">
+    <h5>Your Green Energy Tokens</h5>
+    <br>
+    <br><label for="token">Token Id #:</label><input type="text" id="token" placeholder="e.g., 12"></input>
+    <br><br><button id="send" onclick="App.oneREC()">Token Lookup</button>
+    <br><span id="tokenInfo"></span>
+    <br><br><button id="send" onclick="App.listREC()">List All Your GET</button>
+   <br> <span id="reclist"></span>
+  </div>
+  <div id="retire" class="tabcontent">
+    <h5>Retire Your REC</h5>
+    <br><label for="token">Token Id #:</label><input type="text" id="token" placeholder="e.g., 12"></input>
+    <br><br><button id="send" onclick="App.retireCoin()">Retire REC</button> 
+    <br><br><button id="send" onclick="App.listRetire()">List All Retired RECs</button>
+    <br><span id="retiredlist"></span>
+  </div>
+  <br>
+  <span id="status"></span>
+  <br>
+</div>
+  <script>
+  function openAction(evt, actionItem) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+		  tablinks[i].classname = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(actionItem).style.display = "block";
+    evt.currentTarget.classname += " active";
+  }
+  </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+div.container {
+  width: 100%;
+  font-family: "Helvetica", sans-serif;
+}
+
+header, footer {
+  padding: 1em;
+  color: white;
+  background-color: #3D85C6;
+  display: flex;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+  background-color: #3D85C6; 
+}
+
+h1 {
+  display: inline-block;
+  margin-top: 20%;
+}
+
+h2 {
+  margin-top: 0%;
+  color: #82C7A5;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 16px; 
+}
+
+h5 {
+  color: #82C7A5;
+  font-size: 28px; 
+}
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+.tablinks {
+  font-size: 20px;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14 px 16 px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.headerimage {
+  width: 180px; 
+  height: 300px;
+  margin-left: 20%;
+}
+.flex {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.app {
+  margin-top: 30px;
+  margin-left: 25%;
+  margin-right: 25%
+  
+}
