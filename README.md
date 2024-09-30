@@ -1,48 +1,48 @@
-# BlockChain-REC
-Green Energy Tokens, Block chain powered Renewable energy certificate system developed during the EDF CodeGreen Hackathon
+# BlockChain-REC: Renewable Energy Certificates on Blockchain
 
-## Technology
-This project uses the Truffle Webpack Box as a starting point. The smart contract follows the ERC 721 coin standard for Non Fungible Tokens.  
+A blockchain-powered platform for managing Renewable Energy Certificates (RECs), developed during the EDF CodeGreen Hackathon. This project uses **ERC721** Non-Fungible Tokens (NFTs) to securely track and trade Green Energy Tokens (GETs), representing renewable energy contributions.
 
-## Set Up 
+## Key Technologies
+- **Blockchain Framework:** Truffle
+- **Token Standard:** ERC721 (Non-Fungible Token)
+- **Front-end Development:** JavaScript, HTML, CSS
+- **Smart Contract Interaction:** Web3.js
+- **Development Environment:** Node.js, Webpack
 
-The following setup guide is adapted from http://truffleframework.com/boxes/webpack and http://truffleframework.com/docs/advanced/truffle-with-metamask
-1. Install Truffle globally. 
+## Features
+1. **ERC721**-based smart contracts for secure minting, transferring, and retiring RECs.
+2. Integration with **Metamask** for seamless blockchain interaction.
+3. Frontend for real-time REC management with automated balance refresh.
 
-```
- npm install -g truffle
-```
-2. Clone repository and cd into folder.
-3. Install all dependencies.
-```
-npm install
-```
-4. Run the development console.
-* You will see 10 testing accounts and a Mnemonic needed later for Metamask. 
-```
-truffle develop
-```
-5. Compile and migrate the smart contract from within development console.
-```
-compile
-migrate
-```
-6. run the webpack server for front-end reloading. 
-* This will not recompile changes to the contract.
-```
-npm run dev 
-```
-* View project in browser at location specified
+## Quick Setup
 
-**Step 2 - Install Metamask**
+### 1. Install Prerequisites
+- Install **Truffle** globally:
+  ```bash
+  npm install -g truffle
+### 2. Clone and Set Up Project
 
-7. Get Metamask browser extension from their site metamaks.io.
-8. On the login page click import Existing Den 
-9. In the box marked Wallet Seed enter the Mnemonic dipsplayed when truffle develop first run. 
-10. Enter password and click okay. 
-11. Click on Main Network dropdown and select Custom RPC
-12. In the box titles "New RPC URL enter the port specified when truffle develop command run. Likely http://127.0.0.1:9545
-13. On upper right account icon, select Account 1 or a different account to test contract.
+- Clone the repository and navigate to the project folder:
+  ```bash
+  git clone <repository-url>
+  cd <project-folder>
+### 3. Run the Development Console
+- Start Truffle development console:
+  ```bash
+  truffle develop
+### 4. Compile & Deploy Smart Contracts
+- Inside the Truffle console:
+  ```bash
+  compile
+  migrate
 
-## Troubleshooting ## 
-To do a hard rebuild of the contract, delete the build folder in the project directory and redo steps 4-6. 
+### 5.  Start the Frontend Server
+- Start frontend:
+  ```bash
+   npm run dev
+### 6. Configure Metamask
+- Install the Metamask extension from metamask.io.
+- Import the test account using the mnemonic phrase from Truffle.
+- Switch to a Custom RPC and enter the Truffle development URL (e.g., http://127.0.0.1:9545).
+- Select Account 1 or any test account to interact with the platform.
+
